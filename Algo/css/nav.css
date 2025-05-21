@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #000;
+    padding-top: 67px;
+}
+
+.underline {
+    height: 4px;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+    width: 100%;
+}
+
+.nav-imagen{
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+.imagen{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
