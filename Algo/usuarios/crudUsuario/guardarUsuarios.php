@@ -1,9 +1,9 @@
 <?php
 include("../../crud/db.php");
 
- echo $_SERVER['REQUEST_URI']; 
+echo $_SERVER['REQUEST_URI'];
 
-if(isset($_POST['guardarUsuario'])){
+if (isset($_POST['guardarUsuario'])) {
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
     $cedula = $_POST['cedula'];
@@ -17,9 +17,9 @@ if(isset($_POST['guardarUsuario'])){
     VALUES ('$cedula', '$nombre', '$apellido', '$password', '$telefono', '$fechaNacimiento', '$genero', '$rol')";
     $result = mysqli_query($conn, $query);
 
-    if(!$result){
-    die("Error en la consulta: " . mysqli_error($conn));
-}
+    if (!$result) {
+        die("Error en la consulta: " . mysqli_error($conn));
+    }
 
 
     $_SESSION['message'] = 'Usuario Registrado satisafactoriamente';
@@ -27,7 +27,7 @@ if(isset($_POST['guardarUsuario'])){
 
     header("Location: ../usuarios.php");
 
-    
+
 }
 
 

@@ -1,7 +1,7 @@
 <?php
 include("../crud/db.php");
 
-$id = $_SESSION['id_user']; // Simulamos el usuario con ID = 1
+$id = $_SESSION['id_user'];
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $imagen = '';

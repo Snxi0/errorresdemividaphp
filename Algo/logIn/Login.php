@@ -7,12 +7,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
     <title>Login</title>
 </head>
+
 <body>
     <div class="vid-container">
         <video class="video" muted autoplay loop>
@@ -29,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="text" name="usuario" required>
                     <label>Cédula</label>
                 </div>
-                <div class="input-group">   
+                <div class="input-group">
                     <input type="password" name="contraseña" required>
                     <label>Contraseña</label>
                 </div>
@@ -42,4 +44,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <script src="../js/login.js"></script>
 </body>
+
 </html>

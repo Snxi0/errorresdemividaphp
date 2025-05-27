@@ -1,21 +1,17 @@
 <?php
-session_start(); // 🔹 Necesario para usar $_SESSION
-
 include('../crud/db.php');
+
 
 $cedula = $_POST['usuario'];
 $contraseña = $_POST['contraseña'];
 
-// 🔐 Usar consulta preparada para evitar inyección SQL
-$stmt = $conn->prepare("SELECT id_user, cedula FROM usuarios WHERE cedula = ? AND contraseña = ?");
-$stmt->bind_param("ss", $cedula, $contraseña);
-$stmt->execute();
-$resultado = $stmt->get_result();
+// 👇 Consulta sin preparación (NO RECOMENDADA para producción)
+$query = "SELECT id_user, cedula FROM usuarios WHERE cedula = '$cedula' AND contraseña = '$contraseña'";
+$resultado = mysqli_query($conn, $query);
 
-if ($resultado->num_rows > 0) {
-    $usuario = $resultado->fetch_assoc();
+if (mysqli_num_rows($resultado) > 0) {
+    $usuario = mysqli_fetch_assoc($resultado);
 
-    // Guardamos ID y cédula en la sesión
     $_SESSION['id_user'] = $usuario['id_user'];
     $_SESSION['cedula'] = $usuario['cedula'];
 
@@ -24,5 +20,4 @@ if ($resultado->num_rows > 0) {
 } else {
     $error = "⚠️ Usuario o contraseña incorrectos";
 }
-$stmt->close();
 ?>

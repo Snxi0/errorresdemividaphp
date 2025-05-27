@@ -1,29 +1,39 @@
 body {
     overflow-x: hidden;
-}
+} 
 
 .custom-bd {
     flex-grow: 1;
 }
-
-.custom-ul{  /* Espacio de perfil*/
-    margin-bottom: 42.5vh;
-
-}
 .custom-aside {
-    position: relative;
+    width: 250px;
     background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 70px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1000;
+    font-size: 24px; 
+    scrollbar-width: none; 
 }
+.custom-ul{  
+    margin-bottom: 42vh;
+
+}
+
 
 .custom-aside::before {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
-    width: 6px;              /* grosor del borde */
+    width: 6px;              
     height: 100%;
     background: linear-gradient(to bottom, #FFD700, #FFA500);
-    pointer-events: none;    /* para que no interfiera con clics */
+    pointer-events: none;   
 }
 .dropdown-menu .dropdown-item { 
     width: 100%;
@@ -65,36 +75,91 @@ body {
 
 /*letras del nav xd */
 
-.custom-aside{
-    font-size: 28px;
-}
+
 .custom-name{
     font-size: 23px !important;
 }
-.custom-aside {
-    padding-top: 70px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;         
-    overflow-y: auto;     
-    background-color: #000000; 
-    z-index: 1000;
 
-}
 .custom-bd {
     margin-left: 250px; 
     padding: 20px;
 }
 
+.perfil-img {
+    width: 42px;
+    height: 43px;
+    object-fit: cover;
+}
+.mobile-bottom-nav a {
+    text-decoration: none !important;
+}
 
 
 
 
-@media (max-width: 1700px) {
-    .custom-ul { 
-        margin-bottom: 25.5vh;
-        
+/*-----------------------------@Media --------------------------------------*/
+
+@media (max-width: 768px) {
+    .custom-aside {
+        display: none; 
+    }
+
+    .custom-bd {
+        margin-left: 0 !important;
+        padding-bottom: 60px;
+    }
+}
+@media (max-width: 767.98px) {
+    .custom-bt {
+        width: 100% !important;
+    }
+}
+@media (max-width: 576px) {
+    .form-control.custom-back {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
+@media (max-width: 992px) {
+  .custom-bd {
+    padding-bottom: 100px !important;
+  }
+}
+
+
+.custom-aside::-webkit-scrollbar {
+    display: none; /
+}
+
+@media (max-width: 1200px) {
+    .custom-aside {
+        font-size: 20px;
 }
 }
-  
+
+@media (max-width: 1024px) {
+    .custom-aside {
+        font-size: 18px;
+    }
+    .custom-ul{  
+    margin-bottom: 41vh;
+
+}
+}
+@media (max-width: 1629px) {
+    .custom-aside {
+        font-size: 18px;
+    }
+    .custom-ul{  
+    margin-bottom: 40vh;
+
+}
+}
+
+@media (max-width: 768px) {
+    .custom-aside {
+        display: none;
+    }
+}
+
+

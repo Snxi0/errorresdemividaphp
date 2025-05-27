@@ -18,24 +18,59 @@
 }
 .btn-custom {
     background-color: #b8860b;
-    color: white;
+    color: white !important;
     border: none;
 }
 
 .btn-custom:hover {
-    background-color: #d4af37;
+    background-color: #d4af37 !important;
 }
-
+.custom-button{
+    
+    background-color: #b8860b;
+    color: white !important;
+    border: none;
+}
+.custom-button:hover {
+    background-color: #d4af37 !important;
+}
 .form-group label{
     color: #b8860b;
     font-size: 18px;
     font-weight: bold;
 }
-.custom-button{
-    font-size: 22px;
-    font-weight: bolder;
-    padding: 20px;
+.custom-button {
+    box-sizing: border-box;
+    font-size: 16px;    
+    font-weight: 600;     
+    padding: 10px 15px;   
+    width: auto !important; 
+    min-width: 150px;     
+    white-space: nowrap;  
 }
 
 
 
+
+@media (max-width: 768px) {
+    .custom-bd {
+        margin-left: 0 !important;
+        padding: 10px !important;
+    }
+
+    .col-md-4,
+    .col-md-8 {
+        width: 100%;
+    }
+
+    .custom-aside {
+        display: none; 
+    }
+}
+@media (max-width: 768px) {
+    .custom-table td,
+    .custom-table th {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

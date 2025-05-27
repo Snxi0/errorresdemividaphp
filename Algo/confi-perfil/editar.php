@@ -30,21 +30,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Editar Ingrediente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body class="container py-5 bg-black">
     <h2>Editar Ingrediente</h2>
 
     <form method="POST" enctype="multipart/form-data">
         <label>Nombre del ingrediente</label>
-        <input type="text" name="nombre" class="form-control mb-2" value="<?php echo htmlspecialchars($datos['nombre']); ?>" required>
+        <input type="text" name="nombre" class="form-control mb-2"
+            value="<?php echo htmlspecialchars($datos['nombre']); ?>" required>
 
         <?php if (!empty($datos['imagen'])): ?>
             <label>Imagen actual</label><br>
-            <img src="uploads/<?php echo htmlspecialchars($datos['imagen']); ?>" alt="Imagen actual" style="max-width: 200px; margin-bottom: 10px;"><br>
+            <img src="uploads/<?php echo htmlspecialchars($datos['imagen']); ?>" alt="Imagen actual"
+                style="max-width: 200px; margin-bottom: 10px;"><br>
         <?php endif; ?>
 
         <label>Cambiar imagen (opcional)</label>
@@ -54,4 +58,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a href="configuracion.php" class="btn btn-secondary">Cancelar</a>
     </form>
 </body>
+
 </html>

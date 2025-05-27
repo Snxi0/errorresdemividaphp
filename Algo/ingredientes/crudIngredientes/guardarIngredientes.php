@@ -3,7 +3,7 @@ include("../../crud/db.php");
 
 
 
-if(isset($_POST['guardarIngrediente'])){
+if (isset($_POST['guardarIngrediente'])) {
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
     $cantidad = $_POST['cantidad'];
@@ -12,16 +12,16 @@ if(isset($_POST['guardarIngrediente'])){
     VALUES ('$nombre', '$descripcion', '$cantidad')";
     $result = mysqli_query($conn, $query);
 
-    if(!$result){
-    die("Error en la consulta: " . mysqli_error($conn));
-}
+    if (!$result) {
+        die("Error en la consulta: " . mysqli_error($conn));
+    }
 
     $_SESSION['message'] = 'Ingredientes Registrado satisafactoriamente';
     $_SESSION['message_type'] = 'success';
 
     header("Location: ../ingredientes.php");
 
-    
+
 }
 
 
