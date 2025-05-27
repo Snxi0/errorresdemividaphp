@@ -1,0 +1,47 @@
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+   }
+   .img-file{
+    display: none;
+   }
+
+
+
+
+
+    .form-section {
+        border-radius: 8px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .form-floating > label {
+        color: #ccc;
+    }
+
+    .custom-back, .form-select {
+        background-color: #222;
+        color: white;
+        border: 1px solid #444;
+    }
+    h5{
+        color: #ccc;
+    }
+
+    .custom-back:focus, .custom-back:focus {
+        background-color: #222 !important;
+        color: white !important;
+        border-color: #ffc107;
+        box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+    }
+.custom-bt{
+    width: 95%;
+}
+
+
+   

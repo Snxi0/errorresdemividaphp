@@ -1,0 +1,41 @@
+
+.custom-table {
+    background-color: rgba(0, 0, 0, 0.85)  ;
+}
+
+.custom-table th,
+.custom-table td {
+    color: rgb(255, 255, 255) ;
+    background-color: transparent ;
+}
+
+.custom-table thead th {
+    border-color: #ff0000 ;
+}
+
+.custom-table tbody tr {
+    border-color: #ff0000 ;
+}
+.btn-custom {
+    background-color: #b8860b;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #d4af37;
+}
+
+.form-group label{
+    color: #b8860b;
+    font-size: 18px;
+    font-weight: bold;
+}
+.custom-button{
+    font-size: 22px;
+    font-weight: bolder;
+    padding: 20px;
+}
+
+
+
